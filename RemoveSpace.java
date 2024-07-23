@@ -5,8 +5,15 @@ public class RemoveSpace {
         System.out.println("Enter string:");
         String string =sc.nextLine();
         String str[]=string.split(" ");
-        for (String str2 : str) {
-            System.out.print(str2);
+        List list=new ArrayList<>();
+        for (char str2 :string.toCharArray()) {
+            if(Character.isAlphabetic(str2))
+            {
+                list.add(str2);
+            }
+        }
+        for (Object object : list) {
+            System.out.print(object);
         }
     }
 }
